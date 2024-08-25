@@ -75,6 +75,40 @@ bot.hears([
 });
 
 bot.hears([
+    "habla portugeus",
+    "dime algo en portugues",
+    "habla portugues",
+    "dime algo en portugeus",
+    "portugues por favor",
+    "di algo en portugues"
+], async (ctx) => {
+
+    const randomPhrases = [
+        "Eu sou um bot engracao",
+        "Vocé é um cavaleiro engraçado",
+        "Onde está a festa, caballero?",
+        "Não me convide para festa, falso!",
+        "Eu não sei nada de português, desculpa",
+        "Café com leite é tudo, caballerooo!",
+        "Pongale um console.log",
+        "Onde está o elastic search?",
+        "Seu código está cheio de erro",
+        "Pongale um try catch, por favor",
+        "El sistema vai quebrar sem documentação",
+        "Eu falo portugeus, mas é bem esquisito",
+        "Você não tem ideia de como funciona",
+        "Pongale um comentário em seu código",
+        "Tudo que eu sei é 'oi' e 'tchau'"
+    ];
+
+    const message = randomPhrases[Math.floor(Math.random() * randomPhrases.length)];
+
+    await ctx.reply(message, {
+        reply_parameters: { message_id: ctx.msg.message_id }
+    });
+});
+
+bot.hears([
     "da clases de backend",
     "da consejos de backend",
     "consejos de backend",
