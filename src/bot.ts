@@ -1,7 +1,10 @@
+import dotenv from 'dotenv';
 import { Bot } from "grammy";
 
+dotenv.config();
 // Create an instance of the `Bot` class and pass your bot token to it.
-const bot = new Bot("7369258528:AAEOR9-CCjh7l-mxplgot2uYZ344x_K9n5I"); // <-- put your bot token between the ""
+const bot = new Bot(process.env.TOKEN_CABALLERISTICO + ''); // <-- put your bot token between the ""
+//console.log("Bot is running", process.env.TOKEN_CABALLERISTICO);
 
 bot.command("start", (ctx) => ctx.reply("¿Que pasa caballerex?"));
 
@@ -54,7 +57,14 @@ bot.hears([
         "Sexo",
         "😳😳😳",
         "CABALLEROOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-        "Como asi caballerooooo"
+        "Como asi caballerooooo",
+        "TA LOCOOOOOOOOOOOO",
+        "Eso es falso caballero",
+        "eu falo portuguêsinhoou",
+        "Eu sou um bot muito engraçado",
+        "Você é um cavalheiro engraçado",
+        "É o que acontece por não me convidar para festas.",
+        "SE VOLVIO LOCOOOO"
     ];
 
     const message = randomPhareses[Math.floor(Math.random() * randomPhareses.length)];
